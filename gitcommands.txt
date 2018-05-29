@@ -1,0 +1,89 @@
+git log
+git commit
+git config --global --list
+git config --list
+git commit -m "Another modification to the files"
+git diff HEAD~1..HEAD
+git diff HEAD~1..
+git add -u # for updated files
+git add -A # all files untracked, modified and deleted
+git commit -a # is to commit with add.
+git checkout file from last commit
+git reset --hard # this brings back to last commit and remove all changes since last commit
+git reset --soft HEAD~1
+git reset --hard <<commit>> # this will ensure to revoke all changes done since last commit
+all new files and everything is discarded and the state is restored.
+if anything goes wrong with you changes and you are not sure what to do use git reset --hard and the commit to rollback.
+clear
+git clean to clean the untracked files from local repo.
+git clean -n #tells what it will do
+git clean -f # force to deleted
+git log --oneline | wc -l
+git log --format=short
+git shortlog
+git shortlog -sne
+git show HEAD
+git remote , git remote -v
+cat .git/config
+cat ~/.gitconfig
+git tag
+git remote -v
+git remote add origin git@github.com/debu999/learning.git
+git fetch # fetches for all branches like git pull
+git fetch origin -v; git fetch origin; git fetch (Later fetch from all remotes)
+git merge origin/master ; git merge origin/testbranch
+git shortlog; git log
+git branch -r
+
+thus git pull = git fetch; git merge -r origin/master
+git branch --set-upstream master origin/master
+git branch --set-upstream-to=origin/testbranch testbranch -v
+git branch --set-upstream-to=origin/master master -v
+
+git remote remove origin
+git remote -v
+git remote add origin git@github.com/debu999/learning.git
+git branch --set-upstream-to=origin/testbranch testbranch -v
+git branch --set-upstream-to=origin/master master -v
+git tag v1.0 # this will create the tag from the current branch i.e. master in my case
+git tag -a 1.0rc1
+signed tag git tag -s 1.0rc10rc1_signed # Need GPG keys setup I ignored for now
+git push --tags # to push tags locally created in git.
+final module: work with local change, stash changes, merge branch, rebase commits, cherry picking commits, working with remote branches
+git log --oneline --graph
+git log --oneline --all --graph --decorate # new git 2.17 same as above command.
+git config --global alias.lga "log --all --oneline --decorate --graph"
+git lga # aliasing in global config git
+git branch <<branchname>> viz. git branch feature1 or git branch fix1 cb31dc7 the 2nd option is to use sha to point a new branch.
+git branch -m oldname newname
+git branch -d brname # if branch is not merged to master throws error.
+git branch -D brname # Force delete unmerged branch
+git checkout -b feature2 # create and checkout to the new branch
+git reflog (all reference the git head was pointing to . can help to get deleted commits.)
+git stash # save the partial changes.
+git stash list.
+git checkout jira1234
+make changes and then commits
+then git checkout feature2
+git stash apply or git stash pop # pop deletes entries from ref/stash
+git stash drop to drop last saved stash record (Just gets deleted.)
+git merge <<branchname>> in case you have no conflict a fast forward merge is done.
+git merge when there is conflict git shows the conflicts. e.g.
+Auto-merging README.md
+CONFLICT (content): Merge conflict in README.md
+Automatic merge failed; fix conflicts and then commit the result.
+<<<<<<< HEAD
+New Branch created called testbranch.
+
+Sharing remotely to github is easy and super cool. Loving GIT and GITHUB from core of my heart.
+feature2
+changes in feature2
+=======
+fixing bug1234 to README
+>>>>>>> jira1234
+
+use mergetool to resolve
+viz. git mergetool
+git config --globale merge.tool kdiff3
+git diff --cached
+
