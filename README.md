@@ -7,3 +7,4 @@ New Branch created called testbranch.
 
 Sharing remotely to github is easy and super cool. Loving GIT and GITHUB from core of my heart.
 feature2
+changes in feature2
