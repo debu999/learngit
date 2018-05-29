@@ -90,4 +90,12 @@ git rebase master (replay the changes of current branch on top of master.)
 git rebase --continue to keep fixing all merge conflicts.
 git cherry-pick commit-sha
 
+remote servers:
+git push origin feature4
+git push origin feature4:feature4_remote
+delete remote branch:
+git push origin :feature4_remote
+op:To github.com:debu999/learngit.git
+ - [deleted]         feature4_remote
+ 
 #DONE WITH ALL BASIC COMMANDS and concepts of GIT REPO. Really interesting to go through them The master cheat sheet for GIT
