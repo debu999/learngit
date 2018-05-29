@@ -86,4 +86,8 @@ use mergetool to resolve
 viz. git mergetool
 git config --globale merge.tool kdiff3
 git diff --cached
+git rebase master (replay the changes of current branch on top of master.)
+git rebase --continue to keep fixing all merge conflicts.
+git cherry-pick commit-sha
 
+#DONE WITH ALL BASIC COMMANDS and concepts of GIT REPO. Really interesting to go through them The master cheat sheet for GIT
