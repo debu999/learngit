@@ -12,6 +12,7 @@ git checkout file from last commit
 git reset --hard # this brings back to last commit and remove all changes since last commit
 git reset --soft HEAD~1
 git reset --hard <<commit>> # this will ensure to revoke all changes done since last commit
+git reset <<file>> (This will remove the file from add in git)
 all new files and everything is discarded and the state is restored.
 if anything goes wrong with you changes and you are not sure what to do use git reset --hard and the commit to rollback.
 clear
